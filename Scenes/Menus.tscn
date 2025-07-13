@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://d04i8i1bxi7js"]
+
+[ext_resource type="FontFile" uid="uid://llu5i6fs1okj" path="res://Fonts/Gugi-Regular.ttf" id="1_jfwsv"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0.835294, 0.835294, 0.835294, 1)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+offset_top = 150.0
+offset_right = 576.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0.752941, 0.752941, 0.752941, 1)
+theme_override_fonts/font = ExtResource("1_jfwsv")
+theme_override_font_sizes/font_size = 60
+text = "Block Bouncer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menus" type="Node2D" parent="UI"]
+
+[node name="MenuButtons" type="Node2D" parent="UI/Menus"]
+position = Vector2(90, 400)
+
+[node name="StartMenu" type="VBoxContainer" parent="UI/Menus/MenuButtons"]
+offset_right = 400.0
+offset_bottom = 101.0
+
+[node name="LevelSelect" type="Button" parent="UI/Menus/MenuButtons/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.752941, 0.752941, 0.752941, 1)
+theme_override_fonts/font = ExtResource("1_jfwsv")
+theme_override_font_sizes/font_size = 60
+action_mode = 0
+text = "Levels
+"
+flat = true
+
+[node name="Settings" type="Button" parent="UI/Menus/MenuButtons/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.752941, 0.752941, 0.752941, 1)
+theme_override_fonts/font = ExtResource("1_jfwsv")
+theme_override_font_sizes/font_size = 60
+action_mode = 0
+text = "Settings
+"
+flat = true
+
+[node name="Quit" type="Button" parent="UI/Menus/MenuButtons/StartMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.752941, 0.752941, 0.752941, 1)
+theme_override_fonts/font = ExtResource("1_jfwsv")
+theme_override_font_sizes/font_size = 60
+action_mode = 0
+text = "Quit"
+flat = true
+
+[node name="SettingsButtons" type="Node2D" parent="UI/Menus"]
+position = Vector2(576, 400)
+scale = Vector2(1.0004, 1.01378)
+
+[node name="SettingsMenu" type="VBoxContainer" parent="UI/Menus/SettingsButtons"]
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_constants/separation = 30
+
+[node name="Volume" type="HSlider" parent="UI/Menus/SettingsButtons/SettingsMenu"]
+layout_mode = 2
+value = 100.0
+rounded = true
+
+[node name="VolumeText" type="Label" parent="UI/Menus/SettingsButtons/SettingsMenu/Volume"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 60.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("1_jfwsv")
+theme_override_font_sizes/font_size = 20
+text = "Volume
+"
+horizontal_alignment = 1

@@ -11,9 +11,25 @@ config_version=5
 [application]
 
 config/name="Block Bouncer"
+run/main_scene="uid://d04i8i1bxi7js"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=576
+window/size/viewport_height=1024
+
+[file_customization]
+
+folder_colors={
+"res://Blocks/": "purple",
+"res://Player/": "orange",
+"res://Powerups/": "yellow",
+"res://Scenes/": "blue"
+}
 
 [rendering]
 
 renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true
